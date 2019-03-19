@@ -37,12 +37,16 @@ header
 header, main > section
   padding 10px
   margin-bottom 1em
+  @media print
+    margin-bottom 0.5em
   &:last-child
     margin-bottom 0
 
 h2
   margin-top -1em
   margin-bottom 0.8em
+  @media print
+    margin-bottom 0.3em
   &:before
     margin-left -10px
     z-index -1
@@ -52,6 +56,8 @@ h2
     content ''
     background aquamarine
     margin-bottom -0.8em
+    @media print
+      margin-bottom -0.66em
 
 h1
   font-size 1.8rem

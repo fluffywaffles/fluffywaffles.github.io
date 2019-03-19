@@ -44,6 +44,12 @@ main > section {
   padding: 10px;
   margin-bottom: 1em;
 }
+@media print {
+  header,
+  main > section {
+    margin-bottom: 0.5em;
+  }
+}
 header:last-child,
 main > section:last-child {
   margin-bottom: 0;
@@ -51,6 +57,11 @@ main > section:last-child {
 h2 {
   margin-top: -1em;
   margin-bottom: 0.8em;
+}
+@media print {
+  h2 {
+    margin-bottom: 0.3em;
+  }
 }
 h2:before {
   margin-left: -10px;
@@ -61,6 +72,11 @@ h2:before {
   content: '';
   background: #7fffd4;
   margin-bottom: -0.8em;
+}
+@media print {
+  h2:before {
+    margin-bottom: -0.66em;
+  }
 }
 h1 {
   font-size: 1.8rem;
