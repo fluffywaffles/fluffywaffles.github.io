@@ -75,7 +75,7 @@ h2:before {
 }
 @media print {
   h2:before {
-    margin-bottom: -0.66em;
+    margin-bottom: -10px;
   }
 }
 h1 {
