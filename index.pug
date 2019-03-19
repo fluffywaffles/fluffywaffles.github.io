@@ -6,103 +6,106 @@ html
       h1 Jordan Timmerman
       ul.links
         li.email
+          | Email:
           a(href="mailto:skorlir@gmail.com") skorlir@gmail.com
         li.github
+          | GitHub:
           a(href="github.com/fluffywaffles") @fluffywaffles
         li.linkedin
-          a(href="linkedin.com/in/skorlir")  linkedin.com/in/skorlir
+          | LinkedIn:
+          a(href="linkedin.com/in/skorlir") linkedin.com/in/skorlir
     main
       section.statement
         //- Maximum length: ~200 characters
         p
-          | Killer software engineer. Accidental tech lead. Pursuing
-          | exponential growth as a technologist, leader, and
-          | entrepreneur. Current full-time PhD student, evaluating my
-          | options.
+          | Software Engineer. Led development at an early-stage start-up
+          | built on serverless.
+        dl.seek-strength-learn
+          dt Seeking
+          dd
+            p.description strong team, personal growth, visible impact
+          dt Strengths
+          dd
+            p.description front-end, interaction design, databases, APIs
+          dt Learning
+          dd
+            p.description scaling, concurrency, distributed systems
       section.engineering-skills-and-interests
-        h2 Engineering
-        section.skills
-          h3 Skills
-          section.top5
-            h4 Top 5
-            aside in order of skill
-            ol
-              li TypeScript/JavaScript
-              li C++
-              li CSS
-              li Rust
-              li AWS
-          section.additional
-            h4 Additional
-            aside in no particular order
-            ul
-              li Unix
-              li Git
-              li C#
-              li Java
-              li Python
-              li React
-              li Angular 2
-              li Serverless
-        section.interests
-          // IDEA(jordan): replace with "roles" pie-chart?
-          h3 Interests
-          ul
-            li Languages & Tooling
-            li Decentralized Computing
-            li Infrastructure & DevOps
-            li Novel, Intuitive UI
-      section.non-technical-skills
-        h2 Non-Technical Skills
-        section.experience
-          aside in order of experience
+        h2 Skills
+        section.top5
+          h3 Top 5
           ol
-            li Sprint Planning
-            li Research & Design
-            li Team Leadership
-            li Teaching / Training
+            li TypeScript/JavaScript
+            li C++
+            li CSS
+            li AWS
+            li Rust
+        section.additional
+          h3 Additional
+          ul
+            li Linux/Unix
+            li Git
+            li SQL
+            li C#
+            li Java
+            li Python
+            li React
+            li Serverless
+            li vim
+            li Clojure
+        section.non-technical-skills
+          h3 Non-Technical
+          ol
             li Hiring
+            li Research & Design
+            li Sprint Planning
+            li Team Leadership
+            li goto 2;
       section.experience
         h2 Experience
-        .roles
-          aside in order of impact + experience
-          ol
-            li Software Architect
-            li Software Engineer
-            li Internal Tools
-            li DevOps
         ul.jobs
           li.phd
+            section.title
+              h3 PhD Student (Computer Science)
+              small.place Northwestern University
             section.period
               time.start September 2019
-              span ‒
+              span &nbsp;‒&nbsp;
               time.end Present
             p.description
               | PhD in Computer Science, focused on compilers (esp.
-              | autoparallelization, OpenMP, and  C++).
+              | autoparallelization, OpenMP, and  C++). Building
+              | language extensions in C++ for annotating code with
+              | parallelism hints.
+            ul.technologies
+              li C++ (11, 14)
+              li LLVM
+              li Clang
           li.deep-dish
+            section.title
+              h3 Software Engineer
+              small.place Deep Dish Technology
             section.period
               time.start June 2017
-              span ‒
+              span &nbsp;‒&nbsp;
               time.end February 2019
             p.description
-              | First engineer. Operated daily under the CEO and CTO
-              | designing, planning, and executing. I led a team of 4
-              | building an offline-first, embeddable forms language,
-              | compiler, & visual editor.
-              |
-              | I had experience with product demos, customer-stakeholder
-              | meetings, sprint planning, and technical leadership.
+              | First engineer. Led team of 4 building offline-first,
+              | embeddable forms language, compiler, & visual editor in
+              | JavaScript and TypeScript.
             ul.technologies
               li TypeScript/JavaScript
               li HTML & CSS
-              li AWS API Gateway, Lambda, Dynamo, S3
-              li Serverless Framework
-              li Webpack, Rollup (build tooling)
+              li AWS API Gateway, Lambda, DynamoDB, S3
+              li Serverless
+              li Webpack, Rollup
           li.encurate
+            section.title
+              h3 Software Engineer
+              small.place Encurate Mobile
             section.period
               time.start June 2016
-              span ‒
+              span &nbsp;‒&nbsp;
               time.end December 2016
             p.description
               | Generalist & Backend architect. Built a "serverless"
@@ -114,52 +117,56 @@ html
               li AWS API Gateway, Lambda, DynamoDB, S3
               li Bash (tooling)
           li.mmlc
+            section.title
+              h3 Student Developer
+              small.place Northwestern Multimedia Learning Center
             section.period
               time.start October 2013
-              span ‒
+              span &nbsp;‒&nbsp;
               time.end June 2017
-            dl
-              dt Northwestern Multimedia Learning Center (MMLC)
-              dd
-                p.description
-                  | I developed full-stack projects in JavaScript, Java,
-                  | Python, and PHP, including:
-                ul.projects
-                  li.audit
-                    h3 Audit
-                    p.description
-                      | Cross-platform embeddable iOS, Android, & browser
-                      | audio recording tool, used in the Northwestern
-                      | Foreign Language Placement Examinations.
-                    ul.technologies
-                      li JavaScript
-                      li Java WebObjects
-                      li PHP
-                      li Laravel
-                  li.ipad-checkout
-                    h3 iPad Checkout & Install Request App
-                    p.description
-                      | Custom calendar scheduling and Apple App Store API
-                      | search form components.
-                    ul.technologies
-                      li JavaScript
-                      li Python
-                  li.protest
-                    h3 Protest
-                    p.description
-                      | Research project: online foreign language quizzes
-                      | with programmatically generated feedback.
-                    ul.technologies
-                      li React
-                      li JavaScript
-                      li PHP
+            p.description
+              | Part-time 10-15 hrs/wk for 4 years. I developed
+              | independent, full-stack projects, including:
+              dl
+                dt.audit
+                  strong Audit
+                  ul.technologies
+                    li JavaScript
+                    li Java WebObjects
+                    li PHP
+                    li Laravel
+                dd
+                  p.description
+                    | Cross-platform embeddable iOS, Android, & browser
+                    | audio recording tool, used in the Northwestern
+                    | Foreign Language Placement Examinations.
+                dt.ipad-checkout
+                  strong iPad Checkout & Install Request App
+                  ul.technologies
+                    li JavaScript
+                    li jQuery
+                    li Python
+                    li PHP
+                dd
+                  p.description
+                    | Custom calendar scheduling and Apple App Store API
+                    | search form components.
+                dt.protest
+                  strong Protest
+                  ul.technologies
+                    li React
+                    li JavaScript
+                    li PHP
+                dd
+                  p.description
+                    | Research project: online foreign language quizzes
+                    | with programmatically generated feedback.
       section.education
         h2 Education
-        dl
-          dt Northwestern University
-          dd
-            span.year     2017
-            span.degree   BS in Computer Science
+        .northwestern
+          h3 Northwestern University
+          small.year     2017
+          small.degree   B.S. in Computer Science
   | <script id="__bs_script__">//<![CDATA[
   |    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
   | //]]></script>

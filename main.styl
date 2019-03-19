@@ -1,0 +1,142 @@
+*
+  margin 0
+  padding 0
+  margin-block-start 0
+  margin-block-end 0
+  font-size 14px
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing none
+
+body
+  font-family monospace
+  max-width 850px
+  margin 0 auto
+
+@media print
+  *
+    font-size 8pt
+
+header
+  display flex
+  align-items center
+  background aquamarine
+  h1
+    flex 1
+  ul.links
+    font-size 0.8rem
+    flex 1
+    padding 0
+    display flex
+    flex-wrap wrap
+    li
+      list-style-type none
+      margin 0 20px
+      a
+        margin-left 10px
+
+header, main > section
+  padding 10px
+  margin-bottom 1em
+  &:last-child
+    margin-bottom 0
+
+h2
+  margin-top -1em
+  margin-bottom 0.8em
+  &:before
+    margin-left -10px
+    z-index -1
+    width 10em
+    height 1em
+    display block
+    content ''
+    background aquamarine
+    margin-bottom -0.8em
+
+h1
+  font-size 1.8rem
+h2
+  font-size 1.3rem
+h3
+  font-size 1.1rem
+
+.purple
+  color purple
+
+section.engineering-skills-and-interests
+  display flex
+  flex-wrap wrap
+  h2
+    flex 0 0 100%
+  section
+    padding-left 40px
+    max-width 33%
+    flex 1
+    aside
+      margin-left 1rem
+      font-style italic
+      color gray
+    ul, ol
+      margin 0
+      flex 1 1 100%
+      padding 0
+    &.additional ul
+      display flex
+      flex-wrap wrap
+      li
+        flex 1 0 50%
+
+ul
+  list-style-type none
+
+ul.jobs
+  li
+    margin-bottom 1em
+    display flex
+    flex-wrap wrap
+    align-items baseline
+    &:last-child
+      margin-bottom 0
+    .title, .period
+      flex 1
+    .place
+      font-style italic
+    .period
+      text-align right
+    .period
+      color gray
+    .description
+      margin 0.5em 1em
+
+dl, ul.jobs dl
+  margin 0
+  margin-left 2em
+  dt
+    display flex
+    align-items center
+    strong
+      font-size 110%
+  dd
+    .description
+      margin 0 1em
+      font-size 85%
+      color gray
+      margin 0 1em
+
+ul.technologies
+  display flex
+  li
+    background peachpuff
+    margin 5px
+    padding 3px
+    font-size 75%
+    height fit-content
+
+section.education
+  .northwestern
+    display flex
+    align-items baseline
+    small
+      margin-left 1.5em
+      &.degree
+        font-style italic

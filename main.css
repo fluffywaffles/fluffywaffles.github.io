@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: none;
+}
+body {
+  font-family: monospace;
+  max-width: 850px;
+  margin: 0 auto;
+}
+@media print {
+  * {
+    font-size: 8pt;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  background: #7fffd4;
+}
+header h1 {
+  flex: 1;
+}
+header ul.links {
+  font-size: 0.8rem;
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+header ul.links li {
+  list-style-type: none;
+  margin: 0 20px;
+}
+header ul.links li a {
+  margin-left: 10px;
+}
+header,
+main > section {
+  padding: 10px;
+  margin-bottom: 1em;
+}
+header:last-child,
+main > section:last-child {
+  margin-bottom: 0;
+}
+h2 {
+  margin-top: -1em;
+  margin-bottom: 0.8em;
+}
+h2:before {
+  margin-left: -10px;
+  z-index: -1;
+  width: 10em;
+  height: 1em;
+  display: block;
+  content: '';
+  background: #7fffd4;
+  margin-bottom: -0.8em;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.3rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+.purple {
+  color: #800080;
+}
+section.engineering-skills-and-interests {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.engineering-skills-and-interests h2 {
+  flex: 0 0 100%;
+}
+section.engineering-skills-and-interests section {
+  padding-left: 40px;
+  max-width: 33%;
+  flex: 1;
+}
+section.engineering-skills-and-interests section aside {
+  margin-left: 1rem;
+  font-style: italic;
+  color: #808080;
+}
+section.engineering-skills-and-interests section ul,
+section.engineering-skills-and-interests section ol {
+  margin: 0;
+  flex: 1 1 100%;
+  padding: 0;
+}
+section.engineering-skills-and-interests section.additional ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.engineering-skills-and-interests section.additional ul li {
+  flex: 1 0 50%;
+}
+ul {
+  list-style-type: none;
+}
+ul.jobs li {
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+ul.jobs li:last-child {
+  margin-bottom: 0;
+}
+ul.jobs li .title,
+ul.jobs li .period {
+  flex: 1;
+}
+ul.jobs li .place {
+  font-style: italic;
+}
+ul.jobs li .period {
+  text-align: right;
+}
+ul.jobs li .period {
+  color: #808080;
+}
+ul.jobs li .description {
+  margin: 0.5em 1em;
+}
+dl,
+ul.jobs dl {
+  margin: 0;
+  margin-left: 2em;
+}
+dl dt,
+ul.jobs dl dt {
+  display: flex;
+  align-items: center;
+}
+dl dt strong,
+ul.jobs dl dt strong {
+  font-size: 110%;
+}
+dl dd .description,
+ul.jobs dl dd .description {
+  margin: 0 1em;
+  font-size: 85%;
+  color: #808080;
+  margin: 0 1em;
+}
+ul.technologies {
+  display: flex;
+}
+ul.technologies li {
+  background: #ffdab9;
+  margin: 5px;
+  padding: 3px;
+  font-size: 75%;
+  height: fit-content;
+}
+section.education .northwestern {
+  display: flex;
+  align-items: baseline;
+}
+section.education .northwestern small {
+  margin-left: 1.5em;
+}
+section.education .northwestern small.degree {
+  font-style: italic;
+}
