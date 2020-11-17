@@ -45,15 +45,18 @@ html
                   strong @better/events
                   ul.technologies
                     li TypeScript
-                    li make
+                    li Docker
+                    li Terraform
                     li AWS Managed Streaming with Kafka (MSK)
                     li KafkaHQ
                     li Kubernetes
                 dd
                   p.description
-                    | Strongly-typed generic event bus client in
-                    | TypeScript, gracefully degrades to JSONSchema in
-                    | Python. Used with Kafka.
+                    | Strongly-typed event definitions library + client in
+                    | TypeScript. Gracefully degrades to JSONSchema in
+                    | Python. Used with Kafka on AWS. Strong tooling and
+                    | docs: wiki, docker-compose templates, make commands,
+                    | worker abstractions.
                 dt.office-hours
                   strong Core Tech Office Hours
                   ul.technologies
@@ -73,7 +76,7 @@ html
                   ul.technologies
                     li TypeScript + Node.js
                     li Ember.js
-                    li ActiveMQ
+                    li AWS S3, ActiveMQ
                     li WebSockets
                     li Internal frameworks
                 dd
@@ -83,6 +86,23 @@ html
                     | deployed side-by-side for rapid failover. Increased
                     | conversion to 20% from single digits. Enabled
                     | instantaneous user feedback.
+                dt.makefile-includes
+                  strong Makefile.includes
+                  ul.technologies
+                    li make
+                    li CI/CD (Buildkite)
+                    li Docker
+                    li sh, bash
+                    li npm
+                    li pypi
+                    li Artifactory
+                dd
+                  p.description
+                    | Makefile include library with testing framework.
+                    | Automates versioning and library publishing,
+                    | handling integration-testing against dependents;
+                    | abstracts docker commands; generates help text; and
+                    | more.
           li.phd
             section.title
               h3 PhD Student (Computer Science)
@@ -94,8 +114,8 @@ html
             p.description
               | Focused on compilers, specifically: autoparallelization,
               | OpenMP, and  C++. Extended C++ to allow developers to give
-              | hints to the compiler, enabling more automatic
-              | parallelism.
+              | parallelization hints to the compiler. Left program to
+              | return to industry.
             ul.technologies
               li C++ (11, 14)
               li LLVM
@@ -111,11 +131,9 @@ html
             p.description
               | First engineer. Led team of 4 building offline-first,
               | embeddable forms language, compiler, & visual editor in
-              | JavaScript and TypeScript. Designed and built extensible
-              | type system for high-quality, generated feedback in web
-              | forms. Designed multi-tenant repository system for
-              | versioning forms and responses for regulatory compliance
-              | and auditing.
+              | JavaScript and TypeScript. Built generative feedback
+              | systems. Designed multi-tenant versioned repository for
+              | forms and responses.
             ul.technologies
               li TypeScript/JavaScript
               li HTML & CSS
@@ -132,14 +150,10 @@ html
               time.end December 2016
             p.description
               | Backend architect. Built serverless Content Management
-              | System for Museum Apps Platform, now used by 5 museums in
-              | the Midwest. Developed a TypeScript validation library
-              | using decorators and compiler-emitted type info to
-              | generate models from regular classes, with a shallow
-              | learning curve for building new validators. This allowed
-              | sharing models between front-end and back-end, effectively
-              | halving validation effort. Taught Angular 2 to team,
-              | co-led front-end development.
+              | System for Museum Apps Platform. Developed cross-stack
+              | TypeScript validation library using decorators and
+              | compiler-emitted type info to generate models. Taught
+              | Angular 2 to team, led front-end development.
             ul.technologies
               li TypeScript
               li Angular 2
@@ -155,60 +169,40 @@ html
               time.end June 2017
             p.description
               | Over 4 years for 12 hours/week, developed independent,
-              | full-stack projects, including:
-              dl
-                dt.audit
-                  strong Audit
-                  ul.technologies
-                    li JavaScript
-                    li Java WebObjects
-                    li PHP
-                    li Laravel
-                dd
-                  p.description
-                    | Embeddable audio recording app for iOS, Android, &
-                    | web, used for Northwestern Language Placement Exams.
-                dt.protest
-                  strong Protest
-                  ul.technologies
-                    li React
-                    li JavaScript
-                    li PHP
-                dd
-                  p.description
-                    | Online foreign language quizzes with
-                    | programmatically generated feedback.
+              | full-stack projects in React, JavaScript, Java WebObjects,
+              | and PHP. Built cross-platform audio recording software
+              | deployed in Northwestern's online language placement exams
+              | supporting iOS, Android, and browsers. (In 2016.)
       section.engineering-skills-and-interests
         h2 Skills
         section.top5
           h3 Top 5
           ol
             li TypeScript/JavaScript
-            li C++
-            li CSS
+            li Terraform
+            li Kubernetes
             li AWS
-            li Rust
         section.additional
           h3 Additional
           ul
+            li Rust
+            li React.js
+            li C++
+            li CSS
+            li Python
             li Linux/Unix
-            li Git
+            li vim
+            li git
             li PostgreSQL
             li Redis
-            li C#
-            li Java
-            li Python
-            li React
-            li vim
-            li Clojure
         section.non-technical-skills
           h3 Non-Technical
           ol
+            li Interviewing
             li Hiring
-            li Research & Design
-            li Sprint Planning
-            li Team Leadership
-            li goto 2;
+            li Public Speaking
+            li Event Organization
+            li Beer Acquisition
       section.education
         h2 Education
         .northwestern
