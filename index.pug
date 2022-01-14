@@ -19,146 +19,166 @@ html
       section.statement
         //- Maximum length: ~200 characters
         p
-          | Software Engineer. Founding engineer of Better.com platform
-          | team during 8x growth. Avid Arch Linux user.
-        p
-          strong Seeking:
-          |  High impact. Bold mission. Rapid career growth.
+          |  #[strong Software Engineer]. Avid Arch Linux user. I build
+          |  platforms.
       section.experience
         h2 Experience
         ul.jobs
-          li.better
+          li.plaid
             section.title
-              h3 Software Engineer (Core Tech)
-              small.place Better.com
+              h3 Senior Software Engineer (Link Platform)
+              small.place #[a(href="https://www.plaid.com") Plaid]
             section.period
-              time.start June 2019
+              time.start April 2021
               span &nbsp;‒&nbsp;
               time.end Present
             p.description
+              | Shipping #[a(href="https://plaid.com/blog/a-new-architecture-for-plaid-link-server-driven-ui-with-directed-graphs/") Flex Link], a new server-driven architecture driving all of
+              | Plaid's user experiences. Simultaneously migrating traffic, shipping
+              | #[a(href="https://plaid.com/docs/transfer/using-transfer-ui/") new products],
+              | and driving new platform-wide capabilities.
+            dl
+              dt.flexible-link
+                strong Flexible ("Flex") Link
+                ul.technologies
+                  li golang
+                  li LaunchDarkly
+                  li Jenkins
+                  li team leadership
+              dd
+                p.description
+                  | Migrated account-filtering. Facilitated team
+                  | retrospectives. Solved partial-rollout traffic
+                  | failures via CI-based feature-flag-driven
+                  | lowest-common-denominator workflow version consensus.
+              dt.transfer-ui
+                strong
+                  | Transfer UI
+                ul.technologies
+                  li golang
+                  li protobuf
+                  li TypeScript
+                  li React.js
+                  li team leadership
+                small
+                  a(href="https://plaid.com/docs/transfer/using-transfer-ui/")
+                    | https://plaid.com/docs/transfer/using-transfer-ui/
+              dd
+                p.description
+                  | Led 2 engineers developing drop-in 2-tap bank transfer
+                  | user experience built on Flex Link.
+              dt.multi-product-link
+                strong Multi-Product Link
+                ul.technologies
+                  li documentation
+                  li golang
+                  li protobuf
+                  li Google Docs (actually though)
+              dd
+                p.description
+                  | Successfully argued for, prioritized, and designed the
+                  | first novel API changes in 6 years to Link's SDKs.
+                  | Evolved API from binary success/failure
+                  | public-token-only one-per-session results to
+                  | multiple-per-session results, of many products,
+                  | future-proofed against new verticals and user
+          li.better
+            section.title
+              h3 Software Engineer (Core Tech)
+              small.place #[a(href="https://www.better.com") Better.com]
+            section.period
+              time.start June 2019
+              span &nbsp;‒&nbsp;
+              time.end March 2021
+            p.description
               | Founding engineer of platform team. Author of
-              | strongly-typed libraries used daily by >80% of engineers.
-              | Organizer and MC of Core Tech Office Hours, attended
-              | monthly by >35% of engineering.
-              dl
-                dt.better-events
-                  strong @better/events
-                  ul.technologies
-                    li TypeScript
-                    li Docker
-                    li Terraform
-                    li AWS Managed Streaming with Kafka (MSK)
-                    li KafkaHQ
-                    li Kubernetes
-                dd
-                  p.description
-                    | Strongly-typed event definitions library + client in
-                    | TypeScript. Gracefully degrades to JSONSchema in
-                    | Python. Used with Kafka on AWS. Strong tooling and
-                    | docs: wiki, docker-compose templates, make commands,
-                    | worker abstractions.
-                dt.office-hours
-                  strong Core Tech Office Hours
-                  ul.technologies
-                    li public speaking
-                    li event organization
-                    li beer acquisition
-                    li friendliness
-                dd
-                  p.description
-                    | Popular monthly event regularly attended by 65+
-                    | engineers. Organizer and host. Features include
-                    | contributor spotlight, tutorials, updates, Q&A,
-                    | beer, pizza. Recently, less beer and pizza, more
-                    | Keanu gifs on zoom.
-                dt.plaid
-                  strong Plaid Integration
-                  ul.technologies
-                    li TypeScript + Node.js
-                    li Ember.js
-                    li AWS S3, ActiveMQ
-                    li WebSockets
-                    li Internal frameworks
-                dd
-                  p.description
-                    | Moved critical third-party bank statement vendor
-                    | integration from AccountChek to Plaid. Safely
-                    | deployed side-by-side for rapid failover. Increased
-                    | conversion to 20% from single digits. Enabled
-                    | instantaneous user feedback.
-                dt.makefile-includes
-                  strong Makefile.includes
-                  ul.technologies
-                    li make
-                    li CI/CD (Buildkite)
-                    li Docker
-                    li sh, bash
-                    li npm
-                    li pypi
-                    li Artifactory
-                dd
-                  p.description
-                    | Makefile include library with testing framework.
-                    | Automates versioning and library publishing,
-                    | handling integration-testing against dependents;
-                    | abstracts docker commands; generates help text; and
-                    | more.
+              | strongly-typed foundational libraries. Organizer and MC of
+              | Core Tech Office Hours, attended monthly by 65+ engineers
+              | out of 200.
+            dl
+              dt.better-events
+                strong @better/events
+                ul.technologies
+                  li TypeScript
+                  li Docker
+                  li Terraform
+                  li AWS Managed Streaming with Kafka (MSK)
+                  li KafkaHQ
+                  li Kubernetes
+              dd
+                p.description
+                  | Strongly-typed event definitions library + client in
+                  | TypeScript. Gracefully degrades to JSONSchema in
+                  | Python. Used with Kafka on AWS. Strong tooling and
+                  | docs: wiki, docker-compose templates, make commands,
+                  | worker abstractions.
+              dt.office-hours
+                strong Core Tech Office Hours
+                ul.technologies
+                  li public speaking
+                  li event organization
+                  li knowledge sharing
+                  li beer acquisition
+              dd
+                p.description
+                  | Popular monthly event regularly attended by 65+
+                  | engineers. Organizer and host. Features include:
+                  | contributor spotlight, tutorials, platform updates,
+                  | Q&A, beer, pizza, Keanu gifs over zoom.
+              dt.plaid
+                strong Plaid Integration
+                ul.technologies
+                  li TypeScript + Node.js
+                  li Ember.js
+                  li AWS S3, ActiveMQ
+                  li WebSockets
+                  li Internal frameworks
+              dd
+                p.description
+                  | Moved critical third-party bank statement vendor
+                  | integration from AccountChek to Plaid. Safely
+                  | deployed side-by-side for rapid failover. Increased
+                  | conversion to 20% from single digits. Enabled
+                  | instantaneous user feedback.
           li.phd
             section.title
-              h3 PhD Student (Computer Science)
+              h3 PhD Student (CompSci)
               small.place Northwestern University
+            ul.technologies
+              li compiler development
+              li C++ (11, 14)
+              li LLVM
+              li Clang
             section.period
               time.start September 2019
               span &nbsp;‒&nbsp;
               time.end June 2019
             p.description
-              | Focused on compilers, specifically: autoparallelization,
-              | OpenMP, and  C++. Extended C++ to allow developers to give
-              | parallelization hints to the compiler. Left program to
-              | return to industry.
-            ul.technologies
-              li C++ (11, 14)
-              li LLVM
-              li Clang
+              | Compilers research in autoparallelization using OpenMP and
+              | C++.
           li.deep-dish
             section.title
-              h3 Software Engineer
+              h3 Founding Engineer
               small.place Deep Dish Technology
+            ul.technologies
+              li JavaScript
+              li AWS API Gateway, Lambda, DynamoDB, S3
             section.period
               time.start June 2017
               span &nbsp;‒&nbsp;
               time.end February 2019
-            p.description
-              | First engineer. Led team of 4 building offline-first,
-              | embeddable forms language, compiler, & visual editor in
-              | JavaScript and TypeScript. Built generative feedback
-              | systems. Designed multi-tenant versioned repository for
-              | forms and responses.
-            ul.technologies
-              li TypeScript/JavaScript
-              li HTML & CSS
-              li AWS API Gateway, Lambda, DynamoDB, S3
-              li Serverless
-              li Webpack, Rollup
           li.encurate
             section.title
-              h3 Software Engineer
+              h3 Founding Engineer
               small.place Encurate Mobile
-            section.period
-              time.start June 2016
-              span &nbsp;‒&nbsp;
-              time.end December 2016
-            p.description
-              | Backend architect. Built serverless Content Management
-              | System for Museum Apps Platform. Developed cross-stack
-              | TypeScript validation library using decorators and
-              | compiler-emitted type info to generate models. Taught
-              | Angular 2 to team, led front-end development.
             ul.technologies
               li TypeScript
               li Angular 2
               li AWS API Gateway, Lambda, DynamoDB, S3
-              li Bash (tooling)
+            section.period
+              time.start June 2016
+              span &nbsp;‒&nbsp;
+              time.end December 2016
           li.mmlc
             section.title
               h3 Student Developer
@@ -168,20 +188,17 @@ html
               span &nbsp;‒&nbsp;
               time.end June 2017
             p.description
-              | Over 4 years for 12 hours/week, developed independent,
-              | full-stack projects in React, JavaScript, Java WebObjects,
-              | and PHP. Built cross-platform audio recording software
-              | deployed in Northwestern's online language placement exams
-              | supporting iOS, Android, and browsers. (In 2016.)
+              | Developed cross-platform audio recording software
+              | supporting iOS, Android, and browsers (... in 2016).
       section.engineering-skills-and-interests
         h2 Skills
-        section.top5
-          h3 Top 5
+        section.top4
+          h3 Top 4
           ol
-            li TypeScript/JavaScript
-            li Terraform
+            li TypeScript
             li Kubernetes
-            li AWS
+            li golang
+            li CI/CD
         section.additional
           h3 Additional
           ul
@@ -193,22 +210,22 @@ html
             li Linux/Unix
             li vim
             li git
-            li PostgreSQL
-            li Redis
         section.non-technical-skills
           h3 Non-Technical
           ol
             li Interviewing
-            li Hiring
+            li Team Leadership
             li Public Speaking
             li Event Organization
-            li Beer Acquisition
       section.education
         h2 Education
         .northwestern
           h3 Northwestern University
           small.year     2017
           small.degree   B.S. in Computer Science
+      p
+        span.revision
+          | revision: 2022-privatebeta.1
   | <script id="__bs_script__">//<![CDATA[
   |    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
   | //]]></script>
