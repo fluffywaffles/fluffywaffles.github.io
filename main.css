@@ -54,15 +54,7 @@ header:last-child,
 main > section:last-child {
   margin-bottom: 0;
 }
-h2 {
-  margin-top: -1em;
-  margin-bottom: 0.8em;
-}
-@media print {
-  h2 {
-    margin-bottom: 0.3em;
-  }
-}
+.aquamarine-splashed:before,
 h2:before {
   margin-left: -10px;
   z-index: -1;
@@ -74,8 +66,18 @@ h2:before {
   margin-bottom: -0.8em;
 }
 @media print {
+  .aquamarine-splashed:before,
   h2:before {
     margin-bottom: -10px;
+  }
+}
+h2 {
+  margin-top: -1em;
+  margin-bottom: 0.8em;
+}
+@media print {
+  h2 {
+    margin-bottom: 0.3em;
   }
 }
 h1 {
@@ -86,9 +88,6 @@ h2 {
 }
 h3 {
   font-size: 1.1rem;
-}
-.purple {
-  color: #800080;
 }
 section.engineering-skills-and-interests {
   display: flex;
@@ -146,7 +145,8 @@ ul.jobs li .period {
   color: #808080;
 }
 ul.jobs li .description {
-  margin: 0.5em 1em;
+  width: 100%;
+  margin: 0.25em 1em 0.5em 1em;
 }
 dl,
 ul.jobs dl {
@@ -162,15 +162,13 @@ dl dt strong,
 ul.jobs dl dt strong {
   font-size: 110%;
 }
-dl dd .description,
-ul.jobs dl dd .description {
-  margin: 0 1em;
-  font-size: 85%;
-  color: #808080;
-  margin: 0 1em;
+dl dt small a,
+ul.jobs dl dt small a {
+  font-size: 80%;
 }
 ul.technologies {
   display: flex;
+  flex: 2;
 }
 ul.technologies li {
   background: #ffdab9;
@@ -188,4 +186,11 @@ section.education .northwestern small {
 }
 section.education .northwestern small.degree {
   font-style: italic;
+}
+p span.revision {
+  font-size: 66%;
+  padding: 3px;
+  background: #7fffd4;
+  position: fixed;
+  bottom: 0;
 }

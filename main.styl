@@ -42,11 +42,7 @@ header, main > section
   &:last-child
     margin-bottom 0
 
-h2
-  margin-top -1em
-  margin-bottom 0.8em
-  @media print
-    margin-bottom 0.3em
+.aquamarine-splashed
   &:before
     margin-left -10px
     z-index -1
@@ -59,15 +55,20 @@ h2
     @media print
       margin-bottom -10px
 
+
+h2
+  @extend .aquamarine-splashed
+  margin-top -1em
+  margin-bottom 0.8em
+  @media print
+    margin-bottom 0.3em
+
 h1
   font-size 1.8rem
 h2
   font-size 1.3rem
 h3
   font-size 1.1rem
-
-.purple
-  color purple
 
 section.engineering-skills-and-interests
   display flex
@@ -112,7 +113,8 @@ ul.jobs
     .period
       color gray
     .description
-      margin 0.5em 1em
+      width 100%
+      margin 0.25em 1em 0.5em 1em
 
 dl, ul.jobs dl
   margin 0
@@ -122,9 +124,12 @@ dl, ul.jobs dl
     align-items center
     strong
       font-size 110%
+    small a
+      font-size 80%
 
 ul.technologies
   display flex
+  flex 2
   li
     background peachpuff
     margin 5px
@@ -140,3 +145,10 @@ section.education
       margin-left 1.5em
       &.degree
         font-style italic
+
+p span.revision
+  font-size 66%
+  padding 3px
+  background aquamarine
+  position fixed
+  bottom 0
