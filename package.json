@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "npx pug -w index.pug",
-    "serve": "npx browser-sync start -sw",
+    "serve": "npx browser-sync start -sw --no-notify",
     "develop": "tmux splitw 'npm run build' && tmux splitw 'npm run serve'"
   },
   "dependencies": {
