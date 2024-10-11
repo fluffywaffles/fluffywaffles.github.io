@@ -5,7 +5,7 @@
     "develop": "tmux splitw 'npm run build' && tmux splitw 'npm run serve'"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5"
   }
