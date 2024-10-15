@@ -19,38 +19,155 @@ html
       section.statement
         //- Maximum length: ~200 characters
         p
-          |  #[strong Software Engineer]. Avid Arch Linux user. I build
-          |  platforms.
+          | #[strong Senior Software Engineer] with 10 years of experience
+          | shipping full-stack production systems.
+        p.just-for-fun.tiny-note
+          | Fun facts: Avid Arch Linux + Neovim user. Erstwhile Hoosier. SciFi fan.
+          | Kleo (Netflix) is great. Just had a son!
       section.experience
         h2 Experience
         ul.jobs
-          li.plaid
+          li.legend
             section.title
-              h3 Senior Software Engineer (Link Platform)
-              small.place #[a(href="https://www.plaid.com") Plaid]
+              h3 Senior Engineer
+            section.place #[a(href="https://legend.xyz/") Legend Labs]
             section.period
-              time.start April 2021
+              time.start June 2024
               span &nbsp;‒&nbsp;
               time.end Present
             p.description
-              | Shipping #[a(href="https://plaid.com/blog/a-new-architecture-for-plaid-link-server-driven-ui-with-directed-graphs/") Flex Link], a new server-driven architecture driving all of
-              | Plaid's user experiences. Simultaneously migrating traffic, shipping
-              | #[a(href="https://plaid.com/docs/transfer/using-transfer-ui/") new products],
-              | and driving new platform-wide capabilities.
+              | Team of 10 best spun out from Compound Labs to raise
+              | funding to build a new consumer crypto app.
+            dl
+              dt.quark
+                strong Quark smart wallet
+                ul.technologies
+                  li Account Abstraction
+                  li Solidity
+                  li Foundry
+                small.side-link
+                  a(href="https://github.com/compound-finance/quark")
+                    | https://github.com/compound-finance/quark
+              dd
+                p.description
+                  | Developed nonce-scoped isolated storage system,
+                  | #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/src/quark-core/src/QuarkStateManager.sol") QuarkStateManager].
+                  | Implemented
+                  | #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/.github/workflows/gas-snapshot.yml") gas snapshot regression testing].
+                  | Prior to the availability of #[a(href="https://eips.ethereum.org/EIPS/eip-1153") tstore], implemented #[span.technology callcode]-based #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/test/quark-core/Callbacks.t.sol#L230-L288") stateless re-entrancy guard].
+              dt.portfolios
+                strong Portfolios
+                ul.technologies
+                  li Elixir
+                  li Ecto
+                  li Postgresql
+                  li Solidity
+                  li #[a(href="https://github.com/compound-finance/sleuth") Sleuth]
+              dd
+                p.description
+                  | Designed core portfolios data pipeline. Network crawler and Sleuth query,
+                  | interval job snapshotter, notifications sink.
+                p.description.highlight
+                  | Built a net-account-value data pipeline accounting for in-flight
+                  | bridged funds. Yes, when you bridge funds, they don't disappear during
+                  | the bridge: we track them, and you can see them. Surprisingly difficult!
+              dt.builderpack
+                strong BuilderPack
+                ul.technologies
+                  li codegen
+                  li Solidity
+                  li #[a(href="https://github.com/compound-finance/sleuth") Sleuth]
+              dd
+                p.description.highlight
+                  | Developed Solidity code-gen backend, in
+                  | Solidity, for producing an artifact created by crawling the entire
+                  | network of contracts supported by our system. Enables embedding
+                  | well-known facts such as the addresses of lending markets in a trustless
+                  | versioned way across backend and clients. Eliminates 1000s of unnecessary
+                  | #[span.technology eth_call] requests.
+          li.compound-finance
+            section.title
+              h3 Senior Engineer
+            section.place #[a(href="https://compoundlabs.xyz/#team") Compound Labs]
+            section.period
+              time.start July 2022
+              span &nbsp;‒&nbsp;
+              time.end June 2024
+            p.description
+              | Shipped Compound III. Worked on conditional #[a(href="https://blog.compoundlabs.xyz/encumber/") encumber].
+              | Cured chronic unreliability. Eliminated legacy cost centers.
+              | Pivoted through every new effort from Treasury, to Prime, to
+              | #[a(href="https://superstate.co/") SuperState], to Legend.
+            dl
+              dt.node-provider
+                strong Node provider proxy
+                ul.technologies
+                  li Cloudflare Workers
+                  li traffic management
+                  li devops
+                small.side-link
+                  a(href="https://node-provider.compound.finance")
+                    | https://node-provider.compound.finance
+              dd
+                p.description
+                  | Public node endpoint for the Compound III frontend
+                  | responsible for reliably failing over millions of
+                  | daily requests to ensure a working UI.
+                  | Supports application-specific keys and developer
+                  | rate-limiting bypass features.
+                small.tiny-note >>> have you ever wondered if node providers live up to their posted reliability numbers? (They do not.)
+            dl
+              dt.v3-api
+                strong Compound III API
+                ul.technologies
+                  li Cloudflare Workers
+                  li Workers KV
+                  li TypeScript
+                  li EVM
+                  li symbolic execution engine
+                small.side-link
+                  a(href="https://v3-api.compound.finance")
+                    | https://v3-api.compound.finance
+              dd
+                p.description
+                  | High-scale, abuse-prone public unauthenticated API for
+                  | serving the Compound III frontend user experience.
+                  | Transaction history, rewards aggregation, historical
+                  | market data. Replaced legacy v2 API system at an order
+                  | of magnitude less cost.
+                p.description.highlight
+                  | A strongly-typed symbolic execution engine
+                  | written in TypeScript, taking advantage of compiler
+                  | techniques to partially evaluate complex graphs of EVM
+                  | queries and bundle requests into huge JSON-RPC
+                  | batches. Backed by a self-healing global hierarchical
+                  | cache hosted on
+                  | #[a(href="https://developers.cloudflare.com/kv/") Workers KV].
+          li.plaid
+            section.title
+              h3 Senior Software Engineer (Link Platform)
+            section.place #[a(href="https://www.plaid.com") Plaid]
+            section.period
+              time.start April 2021
+              span &nbsp;‒&nbsp;
+              time.end May 2022
+            p.description
+              | Shipped #[a(href="https://plaid.com/blog/a-new-architecture-for-plaid-link-server-driven-ui-with-directed-graphs/") Flex Link], a new server-driven architecture driving all of
+              | Plaid's user experiences. Migrated traffic while shipping
+              | #[a(href="https://plaid.com/docs/transfer/using-transfer-ui/") new products].
+              | Acted as the new platform's pinch hitter. Filled leadership gaps.
             dl
               dt.flexible-link
                 strong Flexible ("Flex") Link
                 ul.technologies
                   li golang
                   li LaunchDarkly
-                  li Jenkins
-                  li team leadership
+                  li Jenkins / CI
               dd
                 p.description
-                  | Migrated account-filtering. Facilitated team
-                  | retrospectives. Solved partial-rollout traffic
-                  | failures via CI-based feature-flag-driven
-                  | lowest-common-denominator workflow version consensus.
+                  | Rolled out Flex Link. Ran team retrospectives.
+                  | Solved partial-rollout failures via
+                  | least-common version resolution.
               dt.transfer-ui
                 strong
                   | Transfer UI
@@ -59,73 +176,46 @@ html
                   li protobuf
                   li TypeScript
                   li React.js
-                  li team leadership
-                small
+                small.side-link
                   a(href="https://plaid.com/docs/transfer/using-transfer-ui/")
                     | https://plaid.com/docs/transfer/using-transfer-ui/
               dd
                 p.description
-                  | Led 2 engineers developing drop-in 2-tap bank transfer
-                  | user experience built on Flex Link.
+                  | Co-led with Transfer team: drop-in 2-tap bank transfer
+                  | user experience built on Flex Link. Designed "intents."
               dt.multi-product-link
                 strong Multi-Product Link
                 ul.technologies
-                  li documentation
                   li golang
                   li protobuf
-                  li Google Docs (actually though)
+                  li documentation
+                  li leadership
               dd
                 p.description
-                  | Successfully argued for, prioritized, and designed the
-                  | first novel API changes in 6 years to Link's SDKs.
-                  | Evolved API from binary success/failure
-                  | public-token-only one-per-session results to
-                  | multiple-per-session results, of many products,
-                  | future-proofed against new verticals and user
-                  | experiences.
+                  | Championed and designed first novel API changes in 6
+                  | years to Link's SDKs to support multiple product
+                  | experiences in a single user flow. (E.g. link bank
+                  | account -> transfer funds, without exiting Link.)
           li.better
             section.title
               h3 Software Engineer (Core Tech)
-              small.place #[a(href="https://www.better.com") Better.com]
+            section.place #[a(href="https://www.better.com") Better.com]
             section.period
               time.start June 2019
               span &nbsp;‒&nbsp;
               time.end March 2021
-            p.description
-              | Founding engineer of platform team. Author of
-              | strongly-typed foundational libraries. Organizer and MC of
-              | Core Tech Office Hours, attended monthly by 65+ engineers
-              | out of 200.
             dl
-              dt.better-events
-                strong @better/events
-                ul.technologies
-                  li TypeScript
-                  li Docker
-                  li Terraform
-                  li AWS Managed Streaming with Kafka (MSK)
-                  li KafkaHQ
-                  li Kubernetes
-              dd
-                p.description
-                  | Strongly-typed event definitions library + client in
-                  | TypeScript. Gracefully degrades to JSONSchema in
-                  | Python. Used with Kafka on AWS. Strong tooling and
-                  | docs: wiki, docker-compose templates, make commands,
-                  | worker abstractions.
               dt.office-hours
                 strong Core Tech Office Hours
                 ul.technologies
                   li public speaking
                   li event organization
-                  li knowledge sharing
-                  li beer acquisition
+                  li devops
               dd
                 p.description
                   | Popular monthly event regularly attended by 65+
-                  | engineers. Organizer and host. Features include:
-                  | contributor spotlight, tutorials, platform updates,
-                  | Q&A, beer, pizza, Keanu gifs over zoom.
+                  | engineers. Organizer and host. Fostered devops platform
+                  | alignment.
               dt.plaid
                 strong Plaid Integration
                 ul.technologies
@@ -136,67 +226,57 @@ html
                   li Internal frameworks
               dd
                 p.description
-                  | Moved critical third-party bank statement vendor
-                  | integration from AccountChek to Plaid. Safely
-                  | deployed side-by-side for rapid failover. Increased
-                  | conversion to 20% from single digits. Enabled
-                  | instantaneous user feedback.
+                  | Refactored asset uploads integration from
+                  | AccountChek to Plaid. Conversion improved from 5% ->
+                  | 20%.
           li.phd
             section.title
               h3 PhD Student (CompSci)
-              small.place Northwestern University
-            ul.technologies
-              li compiler development
-              li C++ (11, 14)
-              li LLVM
-              li Clang
+            section.place Northwestern University
             section.period
-              time.start September 2019
+              time.start September 2018
               span &nbsp;‒&nbsp;
               time.end June 2019
             p.description
-              | Compilers research in autoparallelization using OpenMP and
-              | C++.
+              | Compilers research in autoparallelization using
+              | #[span.technology LLVM], #[span.technology Clang],
+              | #[span.technology OpenMP] and #[span.technology C++].
           li.deep-dish
             section.title
               h3 Founding Engineer
-              small.place Deep Dish Technology
-            ul.technologies
-              li JavaScript
-              li AWS API Gateway, Lambda, DynamoDB, S3
+            section.place Deep Dish Technology
             section.period
               time.start June 2017
               span &nbsp;‒&nbsp;
               time.end February 2019
             p.description
-              | Led team of 4 building offline-first forms language,
-              | compiler, runtime, & visual editor.
+              | Led team of 4. Built a visual forms engine on
+              | #[span.technology JavaScript], #[span.technology AWS API Gateway, Lambda, DynamoDB, S3].
           li.encurate
             section.title
               h3 Founding Engineer
-              small.place Encurate Mobile
-            ul.technologies
-              li TypeScript
-              li Angular 2
-              li AWS API Gateway, Lambda, DynamoDB, S3
+            section.place Encurate Mobile
             section.period
               time.start June 2016
               span &nbsp;‒&nbsp;
               time.end December 2016
             p.description
-              | Backend architect of serverless content-management system
-              | for self-serve museum app development.
+              | Serverless CMS for interactive Museum apps.
+              | #[span.technology TypeScript], #[span.technology Angular 2],
+              | #[span.technology AWS API Gateway, Lambda, DynamoDB, S3].
+            small.tiny-note >>> does anyone else remember bluetooth beacons?
           li.mmlc
             section.title
               h3 Student Developer
-              small.place Northwestern Multimedia Learning Center
+            section.place Northwestern University
             section.period
               time.start October 2013
               span &nbsp;‒&nbsp;
               time.end June 2017
             p.description
-              | Developed cross-platform audio recording software
-              | supporting iOS, Android, and browsers (... in 2016).
+              | Built audio recording software in online language
+              | placement exams for iOS, Android, and browsers.
+            small.tiny-note >>> cross-platform WebAudio in 2016! fun times.
       section.engineering-skills-and-interests
         h2 Skills
         section.top4

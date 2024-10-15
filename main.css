@@ -11,6 +11,7 @@ body {
   font-family: monospace;
   max-width: 850px;
   margin: 0 auto;
+  color: #444;
 }
 @media print {
   * {
@@ -41,6 +42,7 @@ header ul.links li a {
 }
 header,
 main > section {
+  position: relative;
   padding: 10px;
   margin-bottom: 1em;
 }
@@ -104,7 +106,7 @@ section.engineering-skills-and-interests section {
 section.engineering-skills-and-interests section aside {
   margin-left: 1rem;
   font-style: italic;
-  color: #808080;
+  color: #999;
 }
 section.engineering-skills-and-interests section ul,
 section.engineering-skills-and-interests section ol {
@@ -119,11 +121,40 @@ section.engineering-skills-and-interests section.additional ul {
 section.engineering-skills-and-interests section.additional ul li {
   flex: 1 0 50%;
 }
+a {
+  font-size: inherit;
+}
 ul {
   list-style-type: none;
 }
+p.description {
+  margin: 0.25em 1em 0.5em 1em;
+}
+.highlight {
+  border-left: 5px solid #7fffd4;
+  padding-left: 0.5em;
+}
+dd > small.tiny-note {
+  position: relative;
+  top: -0.66em;
+}
+small.tiny-note,
+p.just-for-fun {
+  color: #999;
+  font-size: 75%;
+  font-style: italic;
+  margin-left: 3em;
+  margin-top: -0.66em;
+}
+small.side-link {
+  font-style: italic;
+  margin-left: 0.5em;
+}
+p.just-for-fun {
+  margin-top: 0.25em;
+}
 ul.jobs li {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -131,44 +162,57 @@ ul.jobs li {
 ul.jobs li:last-child {
   margin-bottom: 0;
 }
-ul.jobs li .title,
+ul.jobs li .place,
 ul.jobs li .period {
   flex: 1;
 }
+ul.jobs li .title {
+  margin-right: 0.5em;
+}
 ul.jobs li .place {
+  color: #999;
   font-style: italic;
+}
+ul.jobs li .place:before {
+  content: " @ ";
 }
 ul.jobs li .period {
   text-align: right;
 }
 ul.jobs li .period {
-  color: #808080;
+  color: #999;
 }
 ul.jobs li .description {
   width: 100%;
-  margin: 0.25em 1em 0.5em 1em;
 }
 dl,
 ul.jobs dl {
   margin: 0;
   margin-left: 2em;
 }
+dl dd p.description,
+ul.jobs dl dd p.description {
+  font-size: 0.85em;
+}
 dl dt,
 ul.jobs dl dt {
   display: flex;
   align-items: center;
-}
-dl dt strong,
-ul.jobs dl dt strong {
-  font-size: 110%;
+  margin-bottom: -0.4em;
 }
 dl dt small a,
 ul.jobs dl dt small a {
   font-size: 80%;
 }
+span.technology {
+  background: #ffdab9;
+  margin: 5px 0px;
+  padding: 3px;
+  font-size: 75%;
+  height: fit-content;
+}
 ul.technologies {
   display: flex;
-  flex: 2;
 }
 ul.technologies li {
   background: #ffdab9;
@@ -190,7 +234,7 @@ section.education .northwestern small.degree {
 p span.revision {
   font-size: 66%;
   padding: 3px;
-  color: #808080;
+  color: #999;
   position: fixed;
   bottom: 0;
 }
