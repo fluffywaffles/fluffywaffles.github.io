@@ -37,12 +37,14 @@ html
               time.end Present
             p.description
               | Team of 10 best spun out from Compound Labs to raise
-              | funding to build a new consumer crypto app.
+              | funding to build a new consumer crypto app. Developed
+              | smart contracts from blank page to audit. Built user
+              | portfolio backend systems.
             dl
               dt.quark
                 strong Quark smart wallet
                 ul.technologies
-                  li Account Abstraction
+                  li Smart Wallets
                   li Solidity
                   li Foundry
                 small.side-link
@@ -65,7 +67,7 @@ html
                   li #[a(href="https://github.com/compound-finance/sleuth") Sleuth]
               dd
                 p.description
-                  | Designed core portfolios data pipeline. Network crawler and Sleuth query,
+                  | Designed core portfolios data pipeline. Network crawler query,
                   | interval job snapshotter, notifications sink.
                 p.description.highlight
                   | Built a net-account-value data pipeline accounting for in-flight
@@ -83,7 +85,7 @@ html
                   | Solidity, for producing an artifact created by crawling the entire
                   | network of contracts supported by our system. Enables embedding
                   | well-known facts such as the addresses of lending markets in a trustless
-                  | versioned way across backend and clients. Eliminates 1000s of unnecessary
+                  | versioned way across backend and clients. Can eliminate 1000s of unnecessary
                   | #[span.technology eth_call] requests.
           li.compound-finance
             section.title
@@ -98,24 +100,6 @@ html
               | Cured chronic unreliability. Eliminated legacy cost centers.
               | Pivoted through every new effort from Treasury, to Prime, to
               | #[a(href="https://superstate.co/") SuperState], to Legend.
-            dl
-              dt.node-provider
-                strong Node provider proxy
-                ul.technologies
-                  li Cloudflare Workers
-                  li traffic management
-                  li devops
-                small.side-link
-                  a(href="https://node-provider.compound.finance")
-                    | https://node-provider.compound.finance
-              dd
-                p.description
-                  | Public node endpoint for the Compound III frontend
-                  | responsible for reliably failing over millions of
-                  | daily requests to ensure a working UI.
-                  | Supports application-specific keys and developer
-                  | rate-limiting bypass features.
-                small.tiny-note >>> have you ever wondered if node providers live up to their posted reliability numbers? (They do not.)
             dl
               dt.v3-api
                 strong Compound III API
@@ -137,12 +121,29 @@ html
                   | of magnitude less cost.
                 p.description.highlight
                   | A strongly-typed symbolic execution engine
-                  | written in TypeScript, taking advantage of compiler
-                  | techniques to partially evaluate complex graphs of EVM
-                  | queries and bundle requests into huge JSON-RPC
+                  | in TypeScript, leveraging compiler
+                  | techniques to partially evaluate graphs of EVM
+                  | queries and generate huge JSON-RPC
                   | batches. Backed by a self-healing global hierarchical
                   | cache hosted on
                   | #[a(href="https://developers.cloudflare.com/kv/") Workers KV].
+              dt.node-provider
+                strong Node provider proxy
+                ul.technologies
+                  li Cloudflare Workers
+                  li traffic management
+                  li devops
+                small.side-link
+                  a(href="https://node-provider.compound.finance")
+                    | https://node-provider.compound.finance
+              dd
+                p.description
+                  | Public node endpoint for the Compound III frontend
+                  | responsible for reliably failing over millions of
+                  | daily requests to ensure a working UI.
+                  | Supports application-specific keys and developer
+                  | rate-limiting bypass features.
+                small.tiny-note >>> have you ever wondered if node providers live up to their posted reliability numbers? (They do not.)
           li.plaid
             section.title
               h3 Senior Software Engineer (Link Platform)
@@ -156,7 +157,7 @@ html
               | Plaid's user experiences. Migrated traffic while shipping
               | #[a(href="https://plaid.com/docs/transfer/using-transfer-ui/") new products].
               | Acted as the new platform's pinch hitter. Filled leadership gaps.
-            dl
+            dl.tight
               dt.flexible-link
                 strong Flexible ("Flex") Link
                 ul.technologies
@@ -192,10 +193,8 @@ html
                   li leadership
               dd
                 p.description
-                  | Championed and designed first novel API changes in 6
-                  | years to Link's SDKs to support multiple product
-                  | experiences in a single user flow. (E.g. link bank
-                  | account -> transfer funds, without exiting Link.)
+                  | Designed first novel API changes in 6 years to Link's SDKs to support multiple experiences
+                  | in a single user flow.
           li.better
             section.title
               h3 Software Engineer (Core Tech)
@@ -204,7 +203,7 @@ html
               time.start June 2019
               span &nbsp;‒&nbsp;
               time.end March 2021
-            dl
+            dl.tight
               dt.office-hours
                 strong Core Tech Office Hours
                 ul.technologies
@@ -277,42 +276,38 @@ html
               | Built audio recording software in online language
               | placement exams for iOS, Android, and browsers.
             small.tiny-note >>> cross-platform WebAudio in 2016! fun times.
-      section.engineering-skills-and-interests
-        h2 Skills
-        section.top4
-          h3 Top 4
-          ol
-            li TypeScript
-            li Kubernetes
-            li golang
-            li CI/CD
-        section.additional
-          h3 Additional
-          ul
-            li Rust
-            li React.js
-            li C++
-            li CSS
-            li Python
-            li Linux/Unix
-            li vim
-            li git
-        section.non-technical-skills
-          h3 Non-Technical
-          ol
-            li Interviewing
-            li Team Leadership
-            li Public Speaking
-            li Event Organization
       section.education
         h2 Education
         .northwestern
           h3 Northwestern University
           small.year     2017
           small.degree   B.S. in Computer Science
+      section.engineering-skills-and-interests
+        h2 Skills
+        section.top3
+          h3 Top 3 Recently
+          ol
+            li Elixir
+            li Solidity
+            li DevOps
+        section.additional
+          h3 Additional Interests
+          ul
+            li Rust
+            li Low-level
+            li Compilers
+            li C/C++
+            li Linux/Unix
+            li vim
+        section.non-technical-skills
+          h3 Non-Technical
+          ol
+            li Interviewing
+            li Team Advocacy
+            li Public Speaking
       p
         span.revision
-          | revision: 2022-privatebeta.1
+          | revision: 2024-privatebeta.1
   | <script id="__bs_script__">//<![CDATA[
   |    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
   | //]]></script>

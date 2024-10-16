@@ -9,20 +9,24 @@
 
 body
   font-family monospace
-  max-width 850px
+  max-width 900px
   margin 0 auto
   color #444
 
 @media print
   *
     font-size 8pt
+  p .revision
+    position absolute
+    right 0
+    bottom 0
 
 header
   display flex
   align-items center
   background aquamarine
   h1
-    flex 1
+    flex 1 1 75%
   ul.links
     font-size 0.8rem
     flex 1
@@ -32,6 +36,7 @@ header
     li
       list-style-type none
       margin 0 20px
+      flex 1 1 100%
       a
         margin-left 10px
 
@@ -72,6 +77,9 @@ h2
 h3
   font-size 1.1rem
 
+section.statement
+  margin 0 1em 1em 1em
+
 section.engineering-skills-and-interests
   display flex
   flex-wrap wrap
@@ -102,7 +110,8 @@ ul
   list-style-type none
 
 p.description
-  margin 0.25em 1em 0.5em 1em
+  font-size 0.85em
+  margin 0.25em 13em 0.3em 1em
 
 .highlight
   border-left 5px solid aquamarine
@@ -110,24 +119,27 @@ p.description
 
 dd > small.tiny-note
   position relative
-  top -0.66em
+  top -0.4em
 
 small.tiny-note
   color #999
   font-size 75%
   font-style italic
   margin-left 3em
-  margin-top -0.66em
+  margin-top -0.1em
 
 small.side-link
   font-style italic
-  margin-left 0.5em
+  margin 0 0.5em
+  padding-bottom 0.1em
 
 p.just-for-fun
   @extend small.tiny-note
   margin-top 0.25em
 
 ul.jobs
+  margin-left 1em
+  margin-right 1em
   li
     margin-bottom 0.5em
     display flex
@@ -158,18 +170,22 @@ dl, ul.jobs dl
   margin-left 2em
   dd
     p.description
-      font-size 0.85em
+      max-width fit-content
+  &.tight
+    margin-bottom 0.25em
   dt
     display flex
     align-items center
     margin-bottom -0.4em
+    strong
+      font-size 0.9em
     small a
       font-size 80%
 
 span.technology
   background peachpuff
   margin 5px 0px
-  padding 3px
+  padding 2px
   font-size 75%
   height fit-content
 
@@ -177,13 +193,15 @@ ul.technologies
   display flex
   li
     background peachpuff
-    margin 5px
+    margin 3px 5px 5px 5px
     padding 3px
     font-size 75%
     height fit-content
 
 section.education
   .northwestern
+    margin-left 1em
+    margin-right 1em
     display flex
     align-items baseline
     small
