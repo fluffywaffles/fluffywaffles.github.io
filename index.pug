@@ -23,7 +23,7 @@ html
           | shipping full-stack production systems.
         p.just-for-fun.tiny-note
           | Fun facts: Avid Arch Linux + Neovim user. Erstwhile Hoosier. SciFi fan.
-          | Kleo (Netflix) is great. Just had a son!
+          | I have a 20 month-old son.
       section.experience
         h2 Experience
         ul.jobs
@@ -36,9 +36,64 @@ html
               span &nbsp;‒&nbsp;
               time.end Present
             p.description
-              | Team of 10 best spun out from Compound Labs to raise
-              | funding to build a new consumer crypto app.
+              | Team of 10 best spun out from Compound Labs to build the
+              | best consumer crypto app.
             dl
+              dt.ci-cd
+                strong CI / CD, DevEx and DevOps
+                ul.technologies
+                  li shell
+                  li Docker
+                  li Kubernetes
+                  li GCP / GKE
+                  li Pulumi / Terraform
+                  li GitHub Actions
+                  li Cloudflare
+              dd
+                p.description.highlight.
+                  Built and own our end-to-end production development
+                  process. Everything from GitHub Actions CI/CD pipelines,
+                  to coordinating releases across codependent packages in
+                  our monorepo, to the Pulumi IaaC codebase that deploys
+                  our Kubernetes clusters and the Xcode builds that ship
+                  our iOS clients. Production admin. Experienced, trusted,
+                  and capable.
+              dt.portfolios
+                strong Portfolios
+                ul.technologies
+                  li Elixir
+                  li Ecto
+                  li Postgresql
+                  li Solidity
+                  li Redis
+                  li EVM
+                  li Solana
+              dd
+                p.description.highlight.
+                  Designed core portfolios data pipeline. Crawls networks,
+                  tracks user positions across many chains and many DeFi
+                  protocols, batches accounts for optimal latency and
+                  cost. This is the backbone of our system that handles
+                  every bit of user acccount data.
+              dt.node-proxy
+                strong Node Provider Proxy (v2)
+                ul.technologies
+                  li Redis
+                  li Elixir
+                  li EVM
+                  li Solana
+                  li Telemetry / OpenTelemetry
+              dd
+                p.description
+                  | Smart routing for node RPCs for Ethereum and Solana
+                  | chains. Models provider capabilities and routes
+                  | acccordingly (e.g. submit transactions on mainnet to
+                  | flashbots; send trace RPCs only to providers that
+                  | support traces; etc.). Executes strategies: ranks and
+                  | prioritizes the best-performing providers, races
+                  | latency-sensitive requests across many providers.
+                  | Implements traces and telemetry for observability.
+                small.tiny-note >>> have you ever wondered if node providers live up to their posted reliability numbers? (They do not.)
               dt.quark
                 strong Quark smart wallet
                 ul.technologies
@@ -49,42 +104,14 @@ html
                   a(href="https://github.com/compound-finance/quark")
                     | https://github.com/compound-finance/quark
               dd
-                p.description
-                  | Developed nonce-scoped isolated storage system,
-                  | #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/src/quark-core/src/QuarkStateManager.sol") QuarkStateManager].
-                  | Implemented
-                  | #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/.github/workflows/gas-snapshot.yml") gas snapshot regression testing].
-                  | Prior to the availability of #[a(href="https://eips.ethereum.org/EIPS/eip-1153") tstore], implemented #[span.technology callcode]-based #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/test/quark-core/Callbacks.t.sol#L230-L288") stateless re-entrancy guard].
-              dt.portfolios
-                strong Portfolios
-                ul.technologies
-                  li Elixir
-                  li Ecto
-                  li Postgresql
-                  li Solidity
-                  li #[a(href="https://github.com/compound-finance/sleuth") Sleuth]
-              dd
-                p.description
-                  | Designed core portfolios data pipeline. Network crawler and Sleuth query,
-                  | interval job snapshotter, notifications sink.
-                p.description.highlight
-                  | Built a net-account-value data pipeline accounting for in-flight
-                  | bridged funds. Yes, when you bridge funds, they don't disappear during
-                  | the bridge: we track them, and you can see them. Surprisingly difficult!
-              dt.builderpack
-                strong BuilderPack
-                ul.technologies
-                  li codegen
-                  li Solidity
-                  li #[a(href="https://github.com/compound-finance/sleuth") Sleuth]
-              dd
-                p.description.highlight
-                  | Developed Solidity code-gen backend, in
-                  | Solidity, for producing an artifact created by crawling the entire
-                  | network of contracts supported by our system. Enables embedding
-                  | well-known facts such as the addresses of lending markets in a trustless
-                  | versioned way across backend and clients. Eliminates 1000s of unnecessary
-                  | #[span.technology eth_call] requests.
+                p.description.
+                  Non-ERC-4337-compatible smart wallet platform.
+                  Participated broadly, but to name some specifics...
+                  Developed nonce-scoped isolated storage system,
+                  #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/src/quark-core/src/QuarkStateManager.sol") QuarkStateManager].
+                  Implemented
+                  #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/.github/workflows/gas-snapshot.yml") gas snapshot regression testing].
+                  Prior to the availability of #[a(href="https://eips.ethereum.org/EIPS/eip-1153") tstore], implemented #[span.technology callcode]-based #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/test/quark-core/Callbacks.t.sol#L230-L288") stateless re-entrancy guard].
           li.compound-finance
             section.title
               h3 Senior Engineer
@@ -98,24 +125,6 @@ html
               | Cured chronic unreliability. Eliminated legacy cost centers.
               | Pivoted through every new effort from Treasury, to Prime, to
               | #[a(href="https://superstate.co/") SuperState], to Legend.
-            dl
-              dt.node-provider
-                strong Node provider proxy
-                ul.technologies
-                  li Cloudflare Workers
-                  li traffic management
-                  li devops
-                small.side-link
-                  a(href="https://node-provider.compound.finance")
-                    | https://node-provider.compound.finance
-              dd
-                p.description
-                  | Public node endpoint for the Compound III frontend
-                  | responsible for reliably failing over millions of
-                  | daily requests to ensure a working UI.
-                  | Supports application-specific keys and developer
-                  | rate-limiting bypass features.
-                small.tiny-note >>> have you ever wondered if node providers live up to their posted reliability numbers? (They do not.)
             dl
               dt.v3-api
                 strong Compound III API
@@ -277,33 +286,6 @@ html
               | Built audio recording software in online language
               | placement exams for iOS, Android, and browsers.
             small.tiny-note >>> cross-platform WebAudio in 2016! fun times.
-      section.engineering-skills-and-interests
-        h2 Skills
-        section.top4
-          h3 Top 4
-          ol
-            li TypeScript
-            li Kubernetes
-            li golang
-            li CI/CD
-        section.additional
-          h3 Additional
-          ul
-            li Rust
-            li React.js
-            li C++
-            li CSS
-            li Python
-            li Linux/Unix
-            li vim
-            li git
-        section.non-technical-skills
-          h3 Non-Technical
-          ol
-            li Interviewing
-            li Team Leadership
-            li Public Speaking
-            li Event Organization
       section.education
         h2 Education
         .northwestern
@@ -312,7 +294,7 @@ html
           small.degree   B.S. in Computer Science
       p
         span.revision
-          | revision: 2022-privatebeta.1
+          | revision: 2026-privatedraft.1
   | <script id="__bs_script__">//<![CDATA[
   |    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
   | //]]></script>
