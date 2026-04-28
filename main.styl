@@ -116,7 +116,7 @@ small.tiny-note
   color #999
   font-size 75%
   font-style italic
-  margin-left 3em
+  margin-left 1em
   margin-top -0.66em
 
 small.side-link
@@ -135,30 +135,37 @@ ul.jobs
     align-items baseline
     &:last-child
       margin-bottom 0
-    .place, .period
-      flex 1
     .title
       margin-right 0.5em
+      flex-basis 100%
+    .place, .period
+      flex 1
     .place
       color #999
+      h3
+        display inline-block
+    .period
+      text-align right
+      color #999
+    &.minor .title
+      flex-basis auto
+    &.minor .place
       font-style italic
       &:before
         content " @ "
-    .period
-      text-align right
-    .period
-      color #999
     .description
       width 100%
+      font-size 0.9em
     .technologies
       break
 
 dl, ul.jobs dl
+  width 100%
   margin 0
-  margin-left 2em
+  margin-left 1em
   dd
     p.description
-      font-size 0.85em
+      font-size 0.9em
   dt
     display flex
     align-items center
@@ -178,7 +185,7 @@ ul.technologies
   li
     background peachpuff
     margin 5px
-    padding 3px
+    padding 3px 4px
     font-size 75%
     height fit-content
 

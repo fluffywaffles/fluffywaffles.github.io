@@ -19,50 +19,73 @@ html
       section.statement
         //- Maximum length: ~200 characters
         p
-          | #[strong Senior Software Engineer] with 10 years of experience
-          | shipping full-stack production systems.
+          | #[strong Senior Software Engineer] working full-stack since
+          | 2016. Pragmatic AI advocate.
         p.just-for-fun.tiny-note
-          | Fun facts: Avid Arch Linux + Neovim user. Erstwhile Hoosier. SciFi fan.
-          | I have a 20 month-old son.
+          | Fun facts: Arch Linux + Neovim user. Erstwhile Hoosier. I have a
+          | 22-month-old son. Reading: A Fire Upon the Deep by Vernor Vinge.
       section.experience
         h2 Experience
         ul.jobs
           li.legend
             section.title
               h3 Senior Engineer
-            section.place #[a(href="https://legend.xyz/") Legend Labs]
+            section.place
+              h3 #[a(href="https://legend.xyz/") Legend Labs]
+              small.tiny-note (see also: #[a(href="https://legend.xyz/agents/") legend/agents])
             section.period
               time.start June 2024
               span &nbsp;‒&nbsp;
               time.end Present
-            p.description
-              | Team of 10 best spun out from Compound Labs to build the
-              | best consumer crypto app.
+            p.description.
+              Same team from Compound Labs. Consumer crypto app; pivoted
+              to #[a(href="https://legend.xyz/agents/") agentic finance API].
+              Worked across the stack from smart contracts, to React
+              Native, to DX/DevOps, to backend, to AI. First eng to adopt
+              & advocate for Claude Code.
             dl
+              dt.penny-ai
+                strong "Penny" Finance Agent (Alpha)
+                ul.technologies
+                  li OpenAI
+                  li Anthropic
+                  li Gemini
+                  li React Native
+                  li Expo
+                small.side-link
+                  a(href="http://trypenny.ai/")
+                    | https://trypenny.ai
+                small.side-link
+                  a(href="https://legend.xyz/agents/")
+                    | legend/agents
+              dd
+                p.description.highlight.
+                  Personal finance agent. Built with Expo/React Native,
+                  Elixir, and OpenAI/Anthropic/Gemini APIs. Multi-provider
+                  AI backend; skills/tools; prompting; multi-turn
+                  context management + websocket connectivity persistence.
               dt.ci-cd
-                strong CI / CD, DevEx and DevOps
+                strong CI/CD, DevEx, DevOps
                 ul.technologies
                   li shell
                   li Docker
                   li Kubernetes
-                  li GCP / GKE
+                  li Google Cloud
                   li Pulumi / Terraform
                   li GitHub Actions
                   li Cloudflare
               dd
                 p.description.highlight.
-                  Built and own our end-to-end production development
-                  process. Everything from GitHub Actions CI/CD pipelines,
-                  to coordinating releases across codependent packages in
-                  our monorepo, to the Pulumi IaaC codebase that deploys
-                  our Kubernetes clusters and the Xcode builds that ship
-                  our iOS clients. Production admin. Experienced, trusted,
-                  and capable.
+                  Built and owned end-to-end production development
+                  process. From GitHub Actions CI/CD pipelines, to
+                  automating releases across codependent packages in our
+                  monorepo, to the Pulumi IaaC codebase that deploys our
+                  Kubernetes clusters and the Xcode builds that ship our
+                  iOS clients. Fast and well-maintained.
               dt.portfolios
                 strong Portfolios
                 ul.technologies
                   li Elixir
-                  li Ecto
                   li Postgresql
                   li Solidity
                   li Redis
@@ -70,11 +93,10 @@ html
                   li Solana
               dd
                 p.description.highlight.
-                  Designed core portfolios data pipeline. Crawls networks,
-                  tracks user positions across many chains and many DeFi
-                  protocols, batches accounts for optimal latency and
-                  cost. This is the backbone of our system that handles
-                  every bit of user acccount data.
+                  Designed + built core portfolios data pipeline. Crawls
+                  networks, tracks user positions across chains and DeFi
+                  protocols. Batches accounts for latency and cost. The
+                  backbone of our system: every bit of user acccount data.
               dt.node-proxy
                 strong Node Provider Proxy (v2)
                 ul.technologies
@@ -93,7 +115,6 @@ html
                   | prioritizes the best-performing providers, races
                   | latency-sensitive requests across many providers.
                   | Implements traces and telemetry for observability.
-                small.tiny-note >>> have you ever wondered if node providers live up to their posted reliability numbers? (They do not.)
               dt.quark
                 strong Quark smart wallet
                 ul.technologies
@@ -105,24 +126,23 @@ html
                     | https://github.com/compound-finance/quark
               dd
                 p.description.
-                  Non-ERC-4337-compatible smart wallet platform.
-                  Participated broadly, but to name some specifics...
-                  Developed nonce-scoped isolated storage system,
+                  Smart wallet. Developed nonce-scoped isolated storage system,
                   #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/src/quark-core/src/QuarkStateManager.sol") QuarkStateManager].
                   Implemented
                   #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/.github/workflows/gas-snapshot.yml") gas snapshot regression testing].
-                  Prior to the availability of #[a(href="https://eips.ethereum.org/EIPS/eip-1153") tstore], implemented #[span.technology callcode]-based #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/test/quark-core/Callbacks.t.sol#L230-L288") stateless re-entrancy guard].
+                  Prior to the availability of #[a(href="https://eips.ethereum.org/EIPS/eip-1153") tstore], implemented #[a(href="https://github.com/compound-finance/quark/blob/da0cfcd376bf7d85a9ff8749986555271310e8ae/test/quark-core/Callbacks.t.sol#L230-L288") stateless re-entrancy guard].
           li.compound-finance
             section.title
               h3 Senior Engineer
-            section.place #[a(href="https://compoundlabs.xyz/#team") Compound Labs]
+            section.place
+              h3 #[a(href="https://compoundlabs.xyz/#team") Compound Labs]
             section.period
               time.start July 2022
               span &nbsp;‒&nbsp;
               time.end June 2024
             p.description
-              | Shipped Compound III. Worked on conditional #[a(href="https://blog.compoundlabs.xyz/encumber/") encumber].
               | Cured chronic unreliability. Eliminated legacy cost centers.
+              | Managed web application firewall to address abuse.
               | Pivoted through every new effort from Treasury, to Prime, to
               | #[a(href="https://superstate.co/") SuperState], to Legend.
             dl
@@ -133,17 +153,10 @@ html
                   li Workers KV
                   li TypeScript
                   li EVM
-                  li symbolic execution engine
                 small.side-link
                   a(href="https://v3-api.compound.finance")
                     | https://v3-api.compound.finance
               dd
-                p.description
-                  | High-scale, abuse-prone public unauthenticated API for
-                  | serving the Compound III frontend user experience.
-                  | Transaction history, rewards aggregation, historical
-                  | market data. Replaced legacy v2 API system at an order
-                  | of magnitude less cost.
                 p.description.highlight
                   | A strongly-typed symbolic execution engine
                   | written in TypeScript, taking advantage of compiler
@@ -155,7 +168,8 @@ html
           li.plaid
             section.title
               h3 Senior Software Engineer (Link Platform)
-            section.place #[a(href="https://www.plaid.com") Plaid]
+            section.place
+              h3 #[a(href="https://www.plaid.com") Plaid]
             section.period
               time.start April 2021
               span &nbsp;‒&nbsp;
@@ -175,8 +189,7 @@ html
               dd
                 p.description
                   | Rolled out Flex Link. Ran team retrospectives.
-                  | Solved partial-rollout failures via
-                  | least-common version resolution.
+                  | Solved rollout failures via least-common version resolution.
               dt.transfer-ui
                 strong
                   | Transfer UI
@@ -208,7 +221,8 @@ html
           li.better
             section.title
               h3 Software Engineer (Core Tech)
-            section.place #[a(href="https://www.better.com") Better.com]
+            section.place
+              h3 #[a(href="https://www.better.com") Better.com]
             section.period
               time.start June 2019
               span &nbsp;‒&nbsp;
@@ -219,14 +233,13 @@ html
                 ul.technologies
                   li public speaking
                   li event organization
-                  li devops
+                  li leadership
               dd
                 p.description
                   | Popular monthly event regularly attended by 65+
-                  | engineers. Organizer and host. Fostered devops platform
-                  | alignment.
+                  | engineers. Organizer, host, regular presenter.
               dt.plaid
-                strong Plaid Integration
+                strong Plaid for Underwriting
                 ul.technologies
                   li TypeScript + Node.js
                   li Ember.js
@@ -235,10 +248,10 @@ html
                   li Internal frameworks
               dd
                 p.description
-                  | Refactored asset uploads integration from
+                  | Rebuilt asset uploads integration from
                   | AccountChek to Plaid. Conversion improved from 5% ->
                   | 20%.
-          li.phd
+          li.minor.phd
             section.title
               h3 PhD Student (CompSci)
             section.place Northwestern University
@@ -250,7 +263,7 @@ html
               | Compilers research in autoparallelization using
               | #[span.technology LLVM], #[span.technology Clang],
               | #[span.technology OpenMP] and #[span.technology C++].
-          li.deep-dish
+          li.minor.deep-dish
             section.title
               h3 Founding Engineer
             section.place Deep Dish Technology
@@ -261,7 +274,7 @@ html
             p.description
               | Led team of 4. Built a visual forms engine on
               | #[span.technology JavaScript], #[span.technology AWS API Gateway, Lambda, DynamoDB, S3].
-          li.encurate
+          li.minor.encurate
             section.title
               h3 Founding Engineer
             section.place Encurate Mobile
@@ -274,7 +287,7 @@ html
               | #[span.technology TypeScript], #[span.technology Angular 2],
               | #[span.technology AWS API Gateway, Lambda, DynamoDB, S3].
             small.tiny-note >>> does anyone else remember bluetooth beacons?
-          li.mmlc
+          li.minor.mmlc
             section.title
               h3 Student Developer
             section.place Northwestern University
@@ -294,7 +307,7 @@ html
           small.degree   B.S. in Computer Science
       p
         span.revision
-          | revision: 2026-privatedraft.1
+          | revision: 2026-privatedraft.4
   | <script id="__bs_script__">//<![CDATA[
   |    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
   | //]]></script>
