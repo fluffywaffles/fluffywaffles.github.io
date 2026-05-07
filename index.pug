@@ -19,9 +19,8 @@ html
       section.statement
         //- Maximum length: ~200 characters
         p
-          | #[strong Senior Software Engineer] working full-stack since
-          | 2016. Pragmatic AI advocate.
-        p.just-for-fun.tiny-note
+          | #[strong Senior Software Engineer] working full-stack since 2016.
+        p.just-for-fun
           | Fun facts: Arch Linux + Neovim user. Erstwhile Hoosier. I have a
           | 22-month-old son. Reading: A Fire Upon the Deep by Vernor Vinge.
       section.experience
@@ -42,10 +41,10 @@ html
               to #[a(href="https://legend.xyz/agents/") agentic finance API].
               Worked across the stack from smart contracts, to React
               Native, to DX/DevOps, to backend, to AI. First eng to adopt
-              & advocate for Claude Code.
+              + advocate for Claude Code.
             dl
               dt.penny-ai
-                strong "Penny" Finance Agent (Alpha)
+                strong "Penny" Finance Agent
                 ul.technologies
                   li OpenAI
                   li Anthropic
@@ -62,8 +61,8 @@ html
                 p.description.highlight.
                   Personal finance agent. Built with Expo/React Native,
                   Elixir, and OpenAI/Anthropic/Gemini APIs. Multi-provider
-                  AI backend; skills/tools; prompting; multi-turn
-                  context management + websocket connectivity persistence.
+                  AI backend, skills/tools,  multi-turn context management
+                  + websocket connectivity persistence.
               dt.ci-cd
                 strong CI/CD, DevEx, DevOps
                 ul.technologies
@@ -95,10 +94,10 @@ html
                 p.description.highlight.
                   Designed + built core portfolios data pipeline. Crawls
                   networks, tracks user positions across chains and DeFi
-                  protocols. Batches accounts for latency and cost. The
-                  backbone of our system: every bit of user acccount data.
+                  protocols. Batches accounts for latency and cost. Tracks
+                  work in a priority queue for optimal update cadence.
               dt.node-proxy
-                strong Node Provider Proxy (v2)
+                strong Node Provider Proxy
                 ul.technologies
                   li Redis
                   li Elixir
@@ -106,15 +105,11 @@ html
                   li Solana
                   li Telemetry / OpenTelemetry
               dd
-                p.description
-                  | Smart routing for node RPCs for Ethereum and Solana
-                  | chains. Models provider capabilities and routes
-                  | acccordingly (e.g. submit transactions on mainnet to
-                  | flashbots; send trace RPCs only to providers that
-                  | support traces; etc.). Executes strategies: ranks and
-                  | prioritizes the best-performing providers, races
-                  | latency-sensitive requests across many providers.
-                  | Implements traces and telemetry for observability.
+                p.description.
+                  Smart routing for node RPCs for Ethereum and Solana
+                  chains. Follows policies, e.g. submit transactions on
+                  mainnet to flashbots. Races latency-sensitive requests
+                  across many providers. Emits traces and telemetry.
               dt.quark
                 strong Quark smart wallet
                 ul.technologies
@@ -143,8 +138,6 @@ html
             p.description
               | Cured chronic unreliability. Eliminated legacy cost centers.
               | Managed web application firewall to address abuse.
-              | Pivoted through every new effort from Treasury, to Prime, to
-              | #[a(href="https://superstate.co/") SuperState], to Legend.
             dl
               dt.v3-api
                 strong Compound III API
@@ -157,14 +150,13 @@ html
                   a(href="https://v3-api.compound.finance")
                     | https://v3-api.compound.finance
               dd
-                p.description.highlight
-                  | A strongly-typed symbolic execution engine
-                  | written in TypeScript, taking advantage of compiler
-                  | techniques to partially evaluate complex graphs of EVM
-                  | queries and bundle requests into huge JSON-RPC
-                  | batches. Backed by a self-healing global hierarchical
-                  | cache hosted on
-                  | #[a(href="https://developers.cloudflare.com/kv/") Workers KV].
+                p.description.highlight.
+                  A strongly-typed symbolic execution engine written in
+                  TypeScript, taking advantage of compiler techniques to
+                  evaluate complex graphs of EVM queries and bundle
+                  requests into huge JSON-RPC batches. Backed by a
+                  self-healing global hierarchical cache hosted on
+                  #[a(href="https://developers.cloudflare.com/kv/") Workers KV].
           li.plaid
             section.title
               h3 Senior Software Engineer (Link Platform)
@@ -248,9 +240,8 @@ html
                   li Internal frameworks
               dd
                 p.description
-                  | Rebuilt asset uploads integration from
-                  | AccountChek to Plaid. Conversion improved from 5% ->
-                  | 20%.
+                  | Rebuilt asset uploads integration with Plaid instead
+                  | of AccountChek. Conversion improved from 5% -> 20%.
           li.minor.phd
             section.title
               h3 PhD Student (CompSci)
