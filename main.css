@@ -143,7 +143,7 @@ p.just-for-fun {
   color: #999;
   font-size: 75%;
   font-style: italic;
-  margin-left: 3em;
+  margin-left: 1em;
   margin-top: -0.66em;
 }
 small.side-link {
@@ -162,37 +162,45 @@ ul.jobs li {
 ul.jobs li:last-child {
   margin-bottom: 0;
 }
+ul.jobs li .title {
+  margin-right: 0.5em;
+  flex-basis: 100%;
+}
 ul.jobs li .place,
 ul.jobs li .period {
   flex: 1;
 }
-ul.jobs li .title {
-  margin-right: 0.5em;
-}
 ul.jobs li .place {
   color: #999;
-  font-style: italic;
 }
-ul.jobs li .place:before {
-  content: " @ ";
+ul.jobs li .place h3 {
+  display: inline-block;
 }
 ul.jobs li .period {
   text-align: right;
-}
-ul.jobs li .period {
   color: #999;
 }
+ul.jobs li.minor .title {
+  flex-basis: auto;
+}
+ul.jobs li.minor .place {
+  font-style: italic;
+}
+ul.jobs li.minor .place:before {
+  content: " @ ";
+}
 ul.jobs li .description {
-  width: 100%;
+  font-size: 0.9em;
 }
 dl,
 ul.jobs dl {
+  width: 100%;
   margin: 0;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 dl dd p.description,
 ul.jobs dl dd p.description {
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 dl dt,
 ul.jobs dl dt {
@@ -217,7 +225,7 @@ ul.technologies {
 ul.technologies li {
   background: #ffdab9;
   margin: 5px;
-  padding: 3px;
+  padding: 3px 4px;
   font-size: 75%;
   height: fit-content;
 }
